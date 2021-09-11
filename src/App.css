@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  clip-path: circle();
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-div{
+  width:100%;
+  height:100%;
+  
   display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.center-div{
+  width:300px;
+  min-height: 400px;
+  max-height: 450px;
+  /* border: 1px solid red; */
+  margin-top: 80px;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+figcaption{
+  margin: 10px 0;
   color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.input-div{
+  /* display: flex;
+  justify-self: center;
+  align-items: center; */
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  width:90%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 20px;
+  outline: none;
+  height:40px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.input-div i{
+  position: absolute;
+  color:blueviolet;
+  top: 14px;
+  right: 33px;
+  cursor: pointer;
+  /* display: none; */
+  /* visibility: hidden; */
+}
+
+.item-list{
+  position: relative;
+}
+
+.each{
+  width:90%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-list h1{
+  color: blueviolet; 
+  padding: 10px;
+}
+
+.each:hover{
+  background-color:blueviolet;
+  border-radius: 10px;
+}
+
+.each:hover h1{
+  color:black
+}
+
+.each:hover .bin{
+  color: red;
+}
+
+.each:hover .edit{
+  color:#00FF00;
+}
+
+.icon-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-list .bin{
+  color: blueviolet;
+  margin-top: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.item-list .edit{
+  color: blueviolet;
+  margin-top: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* .item-list .bin:hover{
+  color: red;
+}
+
+.item-list .edit:hover{
+  color: 	#00FF00;
+} */
+.remove{
+  width:120px;
+  height:50px;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 20px auto;
+  display: block;
+  color: white;
+  background-color: transparent;
+  border:1px solid #fff;
+  cursor: pointer;
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+
+.remove:hover{
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  color: #fff;
+}
+
+.each h1{
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
